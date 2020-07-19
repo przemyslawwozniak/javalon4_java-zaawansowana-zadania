@@ -14,9 +14,12 @@ public class OOPRunner {
         comparePoints(new Point(), p1);
         comparePoints(new Point(), p2);*/
 
-        Line l1 = new Line(p1, p2);
+        /*Line l1 = new Line(p1, p2);
         System.out.println(l1);
-        System.out.println("Dlugosc linii: " + l1.calcLength());
+        System.out.println("Dlugosc linii: " + l1.calcLength());*/
+
+        Rectangle r1 = new Rectangle(5, 10, "yellow");
+        System.out.println(r1);
     }
 
     public static void comparePoints(Point p1, Point p2) {
