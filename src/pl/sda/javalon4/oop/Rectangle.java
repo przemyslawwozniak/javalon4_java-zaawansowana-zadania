@@ -18,7 +18,7 @@ public class Rectangle extends Shape {
 
     @Override
     public String toString() {
-        return String.format("To jest kwadrat o wymiarach %d x %d - jego pole wynosi %f. %s",
+        return String.format("To jest kwadrat o wymiarach %d x %d - jego pole wynosi %.2f. %s",
                 a, b, calcArea(), super.toString());
     }
 }

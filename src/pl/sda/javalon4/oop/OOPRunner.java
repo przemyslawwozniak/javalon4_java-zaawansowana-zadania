@@ -20,6 +20,14 @@ public class OOPRunner {
 
         Rectangle r1 = new Rectangle(5, 10, "yellow");
         System.out.println(r1);
+
+        Triangle t1 = new Triangle(5, 10, "green");
+        System.out.println(t1);
+
+        //poniewaz maja wspolnego rodzica to mozna zrobic to:
+        Shape[] shapes = {r1, t1};
+        for(Shape s : shapes)
+            System.out.println(s);
     }
 
     public static void comparePoints(Point p1, Point p2) {
