@@ -29,18 +29,45 @@ public class OOPRunner {
         for(Shape s : shapes)
             System.out.println(s);*/
 
-        Point3D p3d0 = new Point3D();
+        /*Point3D p3d0 = new Point3D();
         Point3D p3d1 = new Point3D(10, 15, 13);
 
         System.out.println(p3d1.distance(p3d0));
         System.out.println(p3d1.distanceOnPlane(p1));
-        System.out.println(p3d1.distance(p1));
+        System.out.println(p3d1.distance(p1));*/
+
+        MovablePoint mp = new MovablePoint(0, 0, 5, 5);
+        move(mp);
+        MovableCircle mc = new MovableCircle(mp, 10);
+        mp.setxSpeed(2);
+        mp.setySpeed(-3);
+        move(mc);
+        move(mp);
+
+        MovablePoint mp2 = new MovablePoint(5, 5, 10,10);
+        MovablePoint mp3 = new MovablePoint(10, 10, -1, -5);
+        MovablePoint mp4 = new MovablePoint(100, 100, -5, -10);
+        MovableRectangle mr = new MovableRectangle(mp, mp2, mp3, mp4, 5, 5);
+        System.out.println(mr);
+        mp2.setySpeed(-100);
+        mp2.setxSpeed(-100);
+        System.out.println(mr);
     }
 
     public static void comparePoints(Point2D p1, Point2D p2) {
         System.out.println(p1);
         System.out.println(p2);
         System.out.println("Odleglosc miedzy tymi punktami wynosi: " + p1.distance(p2) + "\n");
+    }
+
+    public static void move(Movable m) {
+        System.out.println(m);
+        m.moveRight();
+        m.moveUp();
+        System.out.println(m); //5, 5
+        m.moveDown();
+        m.moveLeft();
+        System.out.println(m); //0,0
     }
 
 }
