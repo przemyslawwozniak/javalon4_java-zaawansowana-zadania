@@ -1,11 +1,11 @@
 package pl.sda.javalon4.oop;
 
-public class Point {    //extends java.lang.Object
-    private int x, y;   //=0
+public class Point2D {    //extends java.lang.Object
+    protected int x, y;   //=0; protected aby ulatwic korzystanie w klasie dziecka
 
-    public Point() {}   //domyslny konstruktor dostarczany przez Java jesli nie ma innego konstruktora w klasie
+    public Point2D() {}   //domyslny konstruktor dostarczany przez Java jesli nie ma innego konstruktora w klasie
 
-    public Point(int x, int y) {
+    public Point2D(int x, int y) {
         //this.x = x;
         setX(x);
         //this.y = y;
@@ -17,7 +17,7 @@ public class Point {    //extends java.lang.Object
         return Math.sqrt(Math.pow(x - this.x, 2) + Math.pow(y - this.y, 2));
     }
 
-    public double distance(Point another) {
+    public double distance(Point2D another) {
         return distance(another.x, another.y);
     }
 

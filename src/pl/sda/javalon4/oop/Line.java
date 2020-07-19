@@ -2,11 +2,11 @@ package pl.sda.javalon4.oop;
 
 public class Line {
 
-    private Point begin, end;
+    private Point2D begin, end;
 
     public Line() {};
 
-    public Line(Point begin, Point end) {
+    public Line(Point2D begin, Point2D end) {
         this.begin = begin;
         this.end = end;
     }
@@ -20,19 +20,19 @@ public class Line {
         return String.format("Odcinek [begin = %s, end = %s]", begin.toString(), end.toString());
     }
 
-    public Point getBegin() {
+    public Point2D getBegin() {
         return begin;
     }
 
-    public void setBegin(Point begin) {
+    public void setBegin(Point2D begin) {
         this.begin = begin;
     }
 
-    public Point getEnd() {
+    public Point2D getEnd() {
         return end;
     }
 
-    public void setEnd(Point end) {
+    public void setEnd(Point2D end) {
         this.end = end;
     }
 }
