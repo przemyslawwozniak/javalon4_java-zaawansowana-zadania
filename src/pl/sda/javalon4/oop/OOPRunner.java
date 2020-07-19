@@ -36,7 +36,7 @@ public class OOPRunner {
         System.out.println(p3d1.distanceOnPlane(p1));
         System.out.println(p3d1.distance(p1));*/
 
-        MovablePoint mp = new MovablePoint(0, 0, 5, 5);
+        /*MovablePoint mp = new MovablePoint(0, 0, 5, 5);
         move(mp);
         MovableCircle mc = new MovableCircle(mp, 10);
         mp.setxSpeed(2);
@@ -51,7 +51,19 @@ public class OOPRunner {
         System.out.println(mr);
         mp2.setySpeed(-100);
         mp2.setxSpeed(-100);
-        System.out.println(mr);
+        System.out.println(mr);*/
+
+        Customer c1 = new Customer("Przemek");
+        Customer c2 = new Customer("Oliwia", MemberType.PLATINUM);
+        Customer c3 = new Customer("Emilia", MemberType.GOLD);
+
+        Visit v1 = new Visit(c1, 0, 80);
+        Visit v2 = new Visit(c2, 0, 50);
+        Visit v3 = new Visit(c3, 200, 450);
+
+        Visit[] visits = {v1, v2, v3};
+        for(Visit v : visits)
+            v.printRecipe();
     }
 
     public static void comparePoints(Point2D p1, Point2D p2) {
