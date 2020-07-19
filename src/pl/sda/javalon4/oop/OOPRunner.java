@@ -7,12 +7,16 @@ public class OOPRunner {
         Point p1 = new Point (2, 10);
         Point p2 = new Point(-10, 20);
 
-        comparePoints(p0, p1);
+        /*comparePoints(p0, p1);
         comparePoints(p0, p2);
         comparePoints(p1, p2);
         comparePoints(p2, p1);
         comparePoints(new Point(), p1);
-        comparePoints(new Point(), p2);
+        comparePoints(new Point(), p2);*/
+
+        Line l1 = new Line(p1, p2);
+        System.out.println(l1);
+        System.out.println("Dlugosc linii: " + l1.calcLength());
     }
 
     public static void comparePoints(Point p1, Point p2) {
