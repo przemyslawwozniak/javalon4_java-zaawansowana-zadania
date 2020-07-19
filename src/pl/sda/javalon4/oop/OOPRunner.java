@@ -2,6 +2,8 @@ package pl.sda.javalon4.oop;
 
 import pl.sda.javalon4.pdf.ex3.Point2D;
 import pl.sda.javalon4.pdf.ex4.Movable;
+import pl.sda.javalon4.pdf.ex4.MovablePoint;
+import pl.sda.javalon4.pdf.ex4.MovableRectangle;
 import pl.sda.javalon4.pdf.ex5.Customer;
 import pl.sda.javalon4.pdf.ex5.MemberType;
 import pl.sda.javalon4.pdf.ex5.Visit;
@@ -59,7 +61,7 @@ public class OOPRunner {
         mp2.setxSpeed(-100);
         System.out.println(mr);*/
 
-        Customer c1 = new Customer("Przemek");
+        /*Customer c1 = new Customer("Przemek");
         Customer c2 = new Customer("Oliwia", MemberType.PLATINUM);
         Customer c3 = new Customer("Emilia", MemberType.GOLD);
 
@@ -69,7 +71,23 @@ public class OOPRunner {
 
         Visit[] visits = {v1, v2, v3};
         for(Visit v : visits)
-            v.printRecipe();
+            v.printRecipe();*/
+
+        //rectangle test
+        //A (-3,2) and B (4,2) and C (4,-3) and D (-3,-3)
+        MovablePoint a = new MovablePoint(-3, 2);
+        MovablePoint b = new MovablePoint(4, 2);
+        MovablePoint c = new MovablePoint(4, -3);
+        MovablePoint d = new MovablePoint(-3, -3);
+
+        MovableRectangle mr = new MovableRectangle(a, b, c, d);
+
+        MovablePoint mp = new MovablePoint(0, 0, 5, 5);
+        MovablePoint mp2 = new MovablePoint(5, 5, 10,10);
+        MovablePoint mp3 = new MovablePoint(10, 10, -1, -5);
+        MovablePoint mp4 = new MovablePoint(100, 100, -5, -10);
+        MovableRectangle mr2 = new MovableRectangle(mp, mp2, mp3, mp4, 5, 5);
+
     }
 
     public static void comparePoints(Point2D p1, Point2D p2) {

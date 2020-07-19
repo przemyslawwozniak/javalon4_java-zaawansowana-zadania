@@ -11,6 +11,17 @@ public class MovablePoint implements Movable, Cloneable {
         this.ySpeed = ySpeed;
     }
 
+    public MovablePoint(int x, int y) {
+        this.x = x;
+        this.y = y;
+        this.xSpeed = 1;
+        this.ySpeed = 1;
+    }
+
+    public double distance(MovablePoint mp) {
+        return Math.sqrt(Math.pow(this.x - mp.x, 2) + Math.pow(this.y - mp.y, 2));
+    }
+
     @Override
     protected Object clone() throws CloneNotSupportedException {
         return super.clone();
