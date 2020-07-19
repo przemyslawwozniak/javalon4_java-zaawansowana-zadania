@@ -1,5 +1,11 @@
 package pl.sda.javalon4.oop;
 
+import pl.sda.javalon4.pdf.ex3.Point2D;
+import pl.sda.javalon4.pdf.ex4.Movable;
+import pl.sda.javalon4.pdf.ex5.Customer;
+import pl.sda.javalon4.pdf.ex5.MemberType;
+import pl.sda.javalon4.pdf.ex5.Visit;
+
 public class OOPRunner {
 
     public static void main(String[] args) {

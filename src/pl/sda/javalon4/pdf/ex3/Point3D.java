@@ -1,4 +1,4 @@
-package pl.sda.javalon4.oop;
+package pl.sda.javalon4.pdf.ex3;
 
 public class Point3D extends Point2D {
     private int z;  //=0

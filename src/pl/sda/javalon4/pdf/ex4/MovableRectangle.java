@@ -1,4 +1,4 @@
-package pl.sda.javalon4.oop;
+package pl.sda.javalon4.pdf.ex4;
 
 import java.util.Arrays;
 

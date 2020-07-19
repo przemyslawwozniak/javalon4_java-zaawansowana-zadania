@@ -1,5 +1,7 @@
 package pl.sda.javalon4.oop;
 
+import pl.sda.javalon4.pdf.ex3.Point2D;
+
 public class Line {
 
     private Point2D begin, end;

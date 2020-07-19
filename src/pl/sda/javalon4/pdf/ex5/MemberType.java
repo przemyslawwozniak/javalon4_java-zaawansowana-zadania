@@ -1,4 +1,4 @@
-package pl.sda.javalon4.oop;
+package pl.sda.javalon4.pdf.ex5;
 
 public enum MemberType {
     NONE(0, 0),

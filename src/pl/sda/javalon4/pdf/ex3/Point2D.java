@@ -1,4 +1,4 @@
-package pl.sda.javalon4.oop;
+package pl.sda.javalon4.pdf.ex3;
 
 public class Point2D {    //extends java.lang.Object
     protected int x, y;   //=0; protected aby ulatwic korzystanie w klasie dziecka
