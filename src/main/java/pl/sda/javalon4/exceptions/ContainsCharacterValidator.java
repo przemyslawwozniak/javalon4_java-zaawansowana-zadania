@@ -24,10 +24,10 @@ public class ContainsCharacterValidator extends AbstractValidator {
     @Override
     public boolean validate(String pswd) {
         for(char c : pswd.toCharArray()) {  //1, 2
-            int asciiCodeOfChar = Character.getNumericValue(c);
-            //quick fix
+            //int asciiCodeOfChar = Character.getNumericValue(c);   ---> dla 'd' (kod ascii 100) zwraca 13 -
+            // niezgodne z naszymi zalozeniami co do numerow znakow!
             for(int id = 0; id < charNums.length; id++) {
-                if(charNums[id] == asciiCodeOfChar)
+                if(charNums[id] == c)
                     return true;
             }
         }
