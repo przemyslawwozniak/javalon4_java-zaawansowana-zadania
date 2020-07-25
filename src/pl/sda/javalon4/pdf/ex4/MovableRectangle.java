@@ -65,7 +65,7 @@ public class MovableRectangle implements Movable {
         double cd = points[2].distance(points[3]);
         double da = points[3].distance(points[0]);
 
-        return ab == cd && bc == da;
+        return ab == cd && bc == da;    //true lub false
     }
 
     private boolean diagonalCreatesTriangle(MovablePoint[] points) {
