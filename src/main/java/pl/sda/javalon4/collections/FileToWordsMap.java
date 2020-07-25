@@ -2,6 +2,7 @@ package pl.sda.javalon4.collections;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.file.Files;
 import java.util.HashMap;
 import java.util.List;
