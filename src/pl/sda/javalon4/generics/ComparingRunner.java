@@ -17,10 +17,16 @@ public class ComparingRunner {
         Arrays.sort(autos);
         System.out.println(Arrays.toString(autos));
 
-        sortAndPrint(autos, new AutoComparators.AutoAccComparator());
+        //https://docs.oracle.com/javase/tutorial/java/javaOO/nested.html -> Static Nested Classes
+        /*sortAndPrint(autos, new AutoComparators.AutoAccComparator());
         sortAndPrint(autos, new AutoComparators.AutoHpComparator());
         sortAndPrint(autos, new AutoComparators.AutoManufacturerComparator());
-        sortAndPrint(autos, new AutoComparators.AutoVmaxComparator());
+        sortAndPrint(autos, new AutoComparators.AutoVmaxComparator());*/
+
+        sortAndPrint(autos, AutoComparators.autoAccComparator);
+        sortAndPrint(autos, AutoComparators.autoHpComparator);
+        sortAndPrint(autos, AutoComparators.autoManufacturerComparator);
+        sortAndPrint(autos, AutoComparators.autoVmaxComparator);
 
     }
 

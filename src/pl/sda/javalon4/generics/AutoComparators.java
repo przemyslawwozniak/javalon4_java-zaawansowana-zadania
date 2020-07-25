@@ -4,6 +4,11 @@ import java.util.Comparator;
 
 public class AutoComparators {
 
+    public static Comparator<Auto> autoHpComparator = new AutoHpComparator();
+    public static Comparator<Auto> autoAccComparator = new AutoAccComparator();
+    public static Comparator<Auto> autoVmaxComparator = new AutoVmaxComparator();
+    public static Comparator<Auto> autoManufacturerComparator = new AutoManufacturerComparator();
+
     public static class AutoHpComparator implements Comparator<Auto> {
         @Override
         public int compare(Auto a1, Auto a2) {
