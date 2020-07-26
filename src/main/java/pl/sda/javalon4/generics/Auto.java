@@ -1,5 +1,7 @@
 package pl.sda.javalon4.generics;
 
+import java.util.function.Predicate;
+
 public class Auto implements Comparable<Auto> {
 
     private int price;
@@ -42,6 +44,12 @@ public class Auto implements Comparable<Auto> {
 
     public double getAcceleration() {
         return acceleration;
+    }
+
+    public boolean evaluate(Predicate<Auto> predicate) {
+        boolean testResult = predicate.test(this);
+        System.out.println(testResult);
+        return testResult;
     }
 
     @Override
