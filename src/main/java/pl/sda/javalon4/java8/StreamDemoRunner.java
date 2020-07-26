@@ -5,6 +5,7 @@ import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 
 public class StreamDemoRunner {
 
@@ -92,10 +93,21 @@ public class StreamDemoRunner {
 
         //dla Was
         System.out.println("Osoby zarabiajace powyzej 5k: ");   //filter
+        users.stream()
+                .filter(u -> u.getSalary() > 5000)
+                .forEach(System.out::println);
 
         System.out.println("Osoby z dziecmi w stanie wolnym: ");    //filter x2
+        users.stream()
+                .filter(u -> u.getCs().equals(CivicState.FREE))
+                .filter(u -> u.getChildren() > 0)
+                .forEach(System.out::println);
 
-        System.out.println("Osoba majaca najwieksza pensje: "); //wybor osoby
+        //DESC
+        Optional<User> maxSalary = users.stream()
+                .sorted((uf, us) -> (int)(us.getSalary() - uf.getSalary()))    //w ten sposob bedzie DESC
+                .findFirst();
+        System.out.println("Osoba majaca najwieksza pensje: " + maxSalary.get()); //wybor osoby
 
     }
 
