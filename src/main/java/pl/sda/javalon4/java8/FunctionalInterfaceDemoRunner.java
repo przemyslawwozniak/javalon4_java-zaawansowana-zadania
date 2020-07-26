@@ -3,6 +3,7 @@ package pl.sda.javalon4.java8;
 import pl.sda.javalon4.generics.Auto;
 
 import java.util.Arrays;
+import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 public class FunctionalInterfaceDemoRunner {
@@ -32,6 +33,12 @@ public class FunctionalInterfaceDemoRunner {
         isGermanPremiumBrandFromClass.test(mazda5);
 
         w211.evaluate(auto -> auto.getVmax() >= 240 && auto.getHp() > 180 && auto.getPrice() >= 200000);
+
+        Consumer<Auto> tuneAuto = auto -> {
+            System.out.println(String.format("Twoje auto po tuningu:\nvMax: %d -> %d\nHP: %d -> %d",
+                    auto.getVmax(), (int)(auto.getVmax() * 1.1), auto.getHp(), (int)(auto.getHp() * 1.2))  );
+        };
+        tuneAuto.accept(w211);
     }
 
 }
